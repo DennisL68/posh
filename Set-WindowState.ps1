@@ -20,7 +20,7 @@ function Set-WindowState {
 			Set-WindowState -WindowCaption "Untitled - Notepad" -WindowAction "Minimize"
 	
 		.EXAMPLE
-			et-WindowState -WindowCaption "Untitled - Notepad" -WindowAction "Normalize"
+			Set-WindowState -WindowCaption "Untitled - Notepad" -WindowAction "Normalize"
 	
 		.EXAMPLE
 			$Handle Set-WindowState -ProcessObject (Get-Porcess Notepad) -WindowAction "Hide"
@@ -49,7 +49,7 @@ function Set-WindowState {
 		[string]$WindowCaption,
 		$ProcessObject,
 		[ValidateSet("hide","normalize","minimize","maximize","restore","recent","show","show_na","minimize_na","minimize_nx","default","force_min")]
-		[string]$WindowAction
+		[string]$WindowAction = "normalize"
 	)
 	
 	switch ($WindowAction)
