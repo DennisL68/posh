@@ -23,7 +23,7 @@ function Set-WindowState {
 			Set-WindowState -WindowCaption "Untitled - Notepad" -WindowAction "Normalize"
 	
 		.EXAMPLE
-			$Handle Set-WindowState -ProcessObject (Get-Porcess Notepad) -WindowAction "Hide"
+			$Handle = Set-WindowState -ProcessObject (Get-Porcess Notepad) -WindowAction "Hide"
 	
 		.EXAMPLE
 			Set-WindowState -ProcessObject $Handle -WindowAction "Normalize"
